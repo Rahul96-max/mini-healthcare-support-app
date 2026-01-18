@@ -1,16 +1,33 @@
-# React + Vite
+# Mini Healthcare Support Web App (Concept-Level)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A concept-level mini web app for an NGO to collect:
+- Patient Support requests
+- Volunteer registrations
+- General contact queries
 
-Currently, two official plugins are available:
+## AI / Automation Idea
+1) **Automation: Auto-summary**
+- On every form submission, the backend generates a compact one-line case summary.
+- This helps NGO staff quickly triage requests and route them to the right volunteer/team.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2) **AI Concept: FAQ Chatbot**
+- A simple FAQ chatbot endpoint answers common queries (rule-based for prototype).
+- Upgrade path: RAG + LLM over NGO FAQs/documents for better answers and multilingual support.
 
-## React Compiler
+## Tech Stack
+- Frontend: React + Vite
+- Backend: Node.js + Express
+- Storage: In-memory (prototype)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How an NGO would use it
+- Faster handling of incoming requests using the auto-summary
+- Reduced repetitive questions via chatbot
+- Lightweight admin view for recent submissions
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run Locally
+### Backend
+```bash
+cd server
+npm install
+npm run dev
